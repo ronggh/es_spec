@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>06_箭头函数</title>
+    <meta charset="UTF-8">
+    <title>06_箭头函数</title>
 
 </head>
 <body>
-    <button id="btn">测试箭头函数this_1</button>
-    <button id="btn2">测试箭头函数this_2</button>
+<button id="btn">测试箭头函数this_1</button>
+<button id="btn2">测试箭头函数this_2</button>
 
 
 <!--
@@ -28,14 +28,14 @@
         如果没有，则this是window。
 -->
 <script type="text/javascript">
-  let fun = function () {
-       console.log('fun()');
-   };
-   fun();
-   //没有形参，并且函数体只有一条语句
-   let fun1 = () => console.log('fun1()');
+    let fun = function () {
+        console.log('fun()');
+    };
+    fun();
+    //没有形参，并且函数体只有一条语句
+    let fun1 = () => console.log('fun1()');
     fun1();
-   console.log(fun1());
+    console.log(fun1());
     //一个形参，并且函数体只有一条语句
     let fun2 = x => x;
     console.log(fun2(5));
@@ -52,20 +52,20 @@
 
     setTimeout(() => {
         console.log(this);
-    },1000)
+    }, 1000)
 
-   let btn = document.getElementById('btn');
-   //没有箭头函数
-   btn.onclick = function () {
-       console.log(this);//btn
-   };
-   //箭头函数
-   let btn2 = document.getElementById('btn2');
+    let btn = document.getElementById('btn');
+    //没有箭头函数
+    btn.onclick = function () {
+        console.log(this);//btn
+    };
+    //箭头函数
+    let btn2 = document.getElementById('btn2');
 
     let obj = {
-        name : 'kobe',
-        age : 39,
-        getName : () => {
+        name: 'kobe',
+        age: 39,
+        getName: () => {
             btn2.onclick = () => {
                 console.log(this);//obj
             };
@@ -74,13 +74,14 @@
     obj.getName();
 
 
- function Person() {
-     this.obj = {
-         showThis : () => {
-             console.log(this);
-         }
-     }
- }
+    function Person() {
+        this.obj = {
+            showThis: () => {
+                console.log(this);
+            }
+        }
+    }
+
     let fun5 = new Person();
     fun5.obj.showThis();
 

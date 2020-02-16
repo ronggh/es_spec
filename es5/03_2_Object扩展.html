@@ -12,12 +12,12 @@
 -->
 <script type='text/javascript'>
     var obj = {
-        firstName : 'kobe',
-        lastName : 'bryant',
-        get fullName(){
+        firstName: 'kobe',
+        lastName: 'bryant',
+        get fullName() {
             return this.firstName + ' ' + this.lastName
         },
-        set fullName(data){
+        set fullName(data) {
             var names = data.split(' ');
             this.firstName = names[0];
             this.lastName = names[1];

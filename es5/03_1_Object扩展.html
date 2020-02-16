@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>03_Object扩展</title>
+    <meta charset="UTF-8">
+    <title>03_Object扩展</title>
 </head>
 <body>
 <!--
@@ -22,12 +22,12 @@ ES5给Object扩展了好一些静态方法, 常用的2个:
   * 存取器属性：setter,getter一个用来存值，一个用来取值
 -->
 <script type="text/javascript">
-    var obj = {name : 'curry', age : 29}
+    var obj = {name: 'curry', age: 29}
     var obj1 = {};
     obj1 = Object.create(obj, {
-        sex : {
-            value : '男',
-            writable : true
+        sex: {
+            value: '男',
+            writable: true
         }
     });
     obj1.sex = '女';
@@ -35,15 +35,15 @@ ES5给Object扩展了好一些静态方法, 常用的2个:
 
     //Object.defineProperties(object, descriptors)
     var obj2 = {
-        firstName : 'curry',
-        lastName : 'stephen'
+        firstName: 'curry',
+        lastName: 'stephen'
     };
     Object.defineProperties(obj2, {
-        fullName : {
-            get : function () {
+        fullName: {
+            get: function () {
                 return this.firstName + '-' + this.lastName
             },
-            set : function (data) {
+            set: function (data) {
                 var names = data.split('-');
                 this.firstName = names[0];
                 this.lastName = names[1];

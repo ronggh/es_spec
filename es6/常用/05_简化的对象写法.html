@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>05_简化的对象写法</title>
+    <meta charset="UTF-8">
+    <title>05_简化的对象写法</title>
 </head>
 <body>
 <!--
@@ -23,18 +23,18 @@
     let x = 3;
     let y = 5;
     //普通额写法
-//    let obj = {
-//        x : x,
-//        y : y,
-//        getPoint : function () {
-//            return this.x + this.y
-//        }
-//    };
+    //    let obj = {
+    //        x : x,
+    //        y : y,
+    //        getPoint : function () {
+    //            return this.x + this.y
+    //        }
+    //    };
     //简化的写法
     let obj = {
         x,
         y,
-        getPoint(){
+        getPoint() {
             return this.x
         }
     };
