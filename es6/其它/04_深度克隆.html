@@ -45,7 +45,7 @@
     let obj2 = {};
     Object.assign(obj2, obj);
     console.log(obj2);
-    obj2.sex.option1 = '男'; // 修改复制的对象会影响原对象
+    obj.sex.option1 = '男'; // 修改复制的对象会影响原对象
     console.log(obj2, obj);
 
     // 深度克隆(复制)
